@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" target="_self">
+      <label for="number"
+        >n:
+        <input type="number" name="number" id="num" />
+      </label>
+      <button type="button" onclick="reverse()">submit</button>
+      <p>Reversed number: <span id="result"></span></p>
+    </form>
+    <script>
+      function reverse() {
+        var a = parseInt(document.getElementById("num").value);
+        var rev = 0;
+        while (a !== 0) {
+          var l = a % 10;
+          rev = rev * 10 + l;
+          a = Math.floor(a / 10);
+        }
+        document.getElementById("result").textContent = rev;
+      }
+    </script>
+  </body>
+</html>

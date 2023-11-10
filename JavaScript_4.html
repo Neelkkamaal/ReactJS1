@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" target="_self">
+      <button type="button" onclick="showDate()">show date</button><br />
+      <p id="result1"></p>
+      <br />
+      <button type="button" onclick="showTime()">show Time</button><br />
+      <p id="result2"></p>
+    </form>
+    <script>
+      function showDate() {
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        var formatedDate = day + "/" + month + "/" + year;
+        document.getElementById("result1").textContent = formatedDate;
+      }
+      function showTime() {
+        var date = new Date();
+        document.getElementById("result2").textContent = date;
+      }
+    </script>
+  </body>
+</html>

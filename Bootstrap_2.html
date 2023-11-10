@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> 
+    <style>
+        [class*="col"] {
+          padding: 1rem;
+          background-color: #fdbe33;
+          font-size: 50px;
+        }
+        [class*="nav-link"] {
+          color: white;
+          font-size: small;
+        }
+        .nav-link:hover {
+          color: #fdbe33;
+        }
+        p,
+        h1 {
+          text-align: center;
+        }
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        body {
+          margin: 0;
+          padding: 0; /* Remove scrollbars */
+        }
+  
+        .Image {
+          position: relative;
+          width: 100vw; /* Set width to viewport width */
+          height: 100vh;
+          overflow: hidden; /* Set height to viewport height */
+        }
+  
+        .Image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Ensure the image covers the entire container */
+        }
+        .Image {
+          position: relative;
+          display: inline-block; /* Ensure the container wraps around the image */
+        }
+  
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+          pointer-events: none; /* Allows interaction with elements behind the overlay */
+          z-index: 1; /* Ensure the overlay is above the image */
+        }
+  
+        .text-overlay {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center; /* Center the text content horizontally */
+          color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          font-size: 200%;
+          z-index: 2; /* Ensure the text overlay is above the overlay */
+        }
+  
+        .text-overlay .btn {
+          display: inline-block; /* Ensure the button is displayed inline */
+        }
+        .Image:hover .image-overlay {
+          opacity: 0; /* Hide the overlay on hover */
+        }
+        .card {
+          border-radius: 0px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row bg-warning">
+          <div class="col">
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- Builderz Logo -->
+              <a href="BS-TASK2.html" style="text-decoration: none; color: black">
+                <b>Builderz</b>
+              </a>
+              <!-- Opening Hours -->
+              <div class="ml-auto mr-2">
+                <h6>Opening Hours</h6>
+                <p style="font-size: small">Mon-Fri,8:00-9:00</p>
+              </div>
+              <!-- Call us -->
+              <div class="mr-2">
+                <h6>Call us</h6>
+                <p style="font-size: small">+012 345 6789</p>
+              </div>
+              <!-- Email us -->
+              <div>
+                <h6>Email us</h6>
+                <p style="font-size: small">info@exmaple.com</p>
+              </div>
+            </div>
+            <!-- Rest of your code... -->
+          </div>
+  
+          <div class="container-sm">
+            <nav class="navbar navbar-expand-sm bg-dark">
+              <div class="container-fluid">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">TEAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PROJECT</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-toggle="dropdown"
+                      >PAGES</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="#blog" class="dropdown-item">Blog Page</a>
+                      <a href="#single" class="dropdown-item">Single Page</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-outline-light">
+                      Get a Quote
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="Image">
+        <div class="image-overlay"></div>
+        <img src="carousel-1.jpg" alt="Construction" class="image-with-tint" />
+  
+        <div class="text-overlay">
+          <p style="font-size: 100%">We Are Professional</p>
+          <h1 style="font-size: 200%"><b>For Your Dream Project</b></h1>
+          <button type="button" class="btn btn-outline-light">Get a Quote</button>
+        </div>
+      </div>
+      <div class="card-group" style="margin-top: -5px">
+        <div class="card bg-dark">
+          <div class="card-body" style="color: #fdbe33">
+            <h5 class="card-title"><b>Expert Worker</b></h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body">
+            <h5 class="card-title"><b>Quality Work</b></h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-dark">
+          <div class="card-body" style="color: #fdbe33">
+            <h5 class="card-title"><b>24/7 Support</b></h5>
+            <p class="card-text text-align-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>

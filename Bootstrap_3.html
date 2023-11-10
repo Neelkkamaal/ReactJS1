@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> 
+    <style>
+        .nav-item,
+        form {
+          padding-right: 15px;
+        }
+        @media (max-width: 991.98px) {
+          #navbarSupportedContent.navbar-collapse {
+            padding-left: 15px;
+          }
+        }
+        p {
+          margin: auto;
+          width: 40%;
+        }
+        button {
+          width: max-content;
+        }
+        .card-text {
+          width: 100%;
+          text-align: center;
+        }
+        .w-65 {
+          width: 65%;
+        }
+      </style>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Company name</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Enterprise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button type="button" class="btn btn-outline-primary">Sign up</button>
+          </form>
+        </div>
+      </nav>
+      <h1 class="display-1 text-center">Pricing</h1>
+      <p class="fw-normal text-center" style="margin-bottom: 3%">
+        Quickly build an effective pricing table for your potential customer with
+        this bootstrap example. it's built with default Bootstrap components and
+        utilities with little customization
+      </p>
+      <div class="container">
+        <div class="row w-65 d-flex mx-auto">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <h4 class="card-header text-center">Free</h4>
+              <div class="card-body">
+                <h5 class="card-title display-6 text-center"><b>$0</b>/mo</h5>
+                <p class="card-text" style="margin-bottom: 10%">
+                  10 users inclued <br />
+                  2GB of storage <br />
+                  Email support <br />
+                  Help center access
+                </p>
+                <div class="d-grid gap-2] col-7 mx-auto">
+                  <button class="btn btn-outline-primary" type="button">
+                    Sign up for free
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <h4 class="card-header text-center">Pro</h4>
+              <div class="card-body">
+                <h5 class="card-title display-6 text-center"><b>$15</b>/mo</h5>
+                <p class="card-text" style="margin-bottom: 10%">
+                  20 users inclued <br />
+                  10GB of storage <br />
+                  Priority email support <br />
+                  Help center access
+                </p>
+                <div class="d-grid gap-2] col-7 mx-auto">
+                  <button class="btn btn-primary" type="button">
+                    Get started
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <h4 class="card-header text-center">Enterprise</h4>
+              <div class="card-body">
+                <h5 class="card-title display-6 text-center"><b>$29</b>/mo</h5>
+                <p class="card-text" style="margin-bottom: 10%">
+                  30 users inclued <br />
+                  15GB of storage <br />
+                  Phone and email support <br />
+                  Help center access
+                </p>
+                <div class="d-grid gap-2] col-7 mx-auto">
+                  <button class="btn btn-primary" type="button">
+                    Contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <footer
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
+        >
+          <div class="col mb-3">
+            <a
+              href="https://getbootstrap.com/"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+            >
+              <img
+                src="bootstrap-logo-shadow.png"
+                alt="bootstrap-logo"
+                style="width: 18%; height: 10%; margin: auto"
+              />
+            </a>
+            <p class="text-muted">&copy; 2022</p>
+          </div>
+  
+          <div class="col mb-3"></div>
+  
+          <div class="col mb-3">
+            <h5>Features</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">cool stuff</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Random feature</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Team feature</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">About</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col mb-3">
+            <h5>Resources</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">About</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col mb-3">
+            <h5>About</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">About</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>

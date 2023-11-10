@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" target="_self">
+      <label for="text">text:</label>
+      <input type="text" name="text" id="text" />
+      <button type="button" onclick="sorted()">submit</button>
+      <p>Sorted text: <span id="result"></span></p>
+    </form>
+    <script>
+      function sorted() {
+        var inputText = document.getElementById("text").value;
+        var sortedText = inputText.split("").sort().join("");
+        document.getElementById("result").textContent = sortedText;
+      }
+    </script>
+  </body>
+</html>

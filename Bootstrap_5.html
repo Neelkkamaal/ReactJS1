@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
+  <style>
+    /* Center the form vertically and horizontally */
+    .centered-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    /* Adjust label and input width for one line */
+    .custom-label {
+      width: 150px; /* Adjust this width as needed */
+    }
+    .custom-input {
+      width: calc(100% - 170px); /* Adjust this width as needed */
+    }
+    /* Style for validation error messages */
+    .validation-message {
+      color: red;
+      margin-top: 5px;
+    }
+    /* Add red border for invalid inputs */
+    .is-invalid-input .form-control {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container centered-form">
+    <form action="/register" method="post" class="was-validated">
+      <div class="mb-3 row align-items-center">
+        <label for="firstName" class="col-sm-2 col-form-label custom-label"
+          >First Name:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-person"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              name="firstName"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">First Name is required</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <!-- Add more form fields here with labels and inputs in one line -->
+      <div class="mb-3 row align-items-center">
+        <label for="lastName" class="col-sm-2 col-form-label custom-label"
+          >Last Name:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-person"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              name="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">Last Name is required</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label for="email" class="col-sm-2 col-form-label custom-label"
+          >Email:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="input-group">
+            <span class="input-group-text"
+              ><i class="bi bi-envelope"></i
+            ></span>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="E-Mail Address"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">Please provide a valid email.</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label for="phone" class="col-sm-2 col-form-label custom-label"
+          >Phone Number:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-phone"></i></span>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">
+            Please provide a valid phone number.
+          </div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <!-- Add more form fields here -->
+      <div class="mb-3 row align-items-center">
+        <label for="address" class="col-sm-2 col-form-label custom-label"
+          >Address:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-house"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              name="address"
+              placeholder="Address"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">Address is required.</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label for="city" class="col-sm-2 col-form-label custom-label"
+          >City:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="input-group">
+            <span class="input-group-text"
+              ><i class="bi bi-geo-alt"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              name="city"
+              placeholder="City"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">City is required.</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label for="state" class="col-sm-2 col-form-label custom-label"
+          >State:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <select class="form-select" id="state" name="state" required>
+            <option value="default">Please select your state</option>
+            <option value="A">State A</option>
+            <option value="B">State B</option>
+            <option value="C">State C</option>
+            <option value="D">State D</option>
+            <option value="E">State E</option>
+          </select>
+          <div class="invalid-feedback">Please select a state.</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label class="col-sm-2 col-form-label custom-label"
+          >Do you have hosting?</label
+        >
+        <div class="col-sm-10 custom-input">
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="hostingYes"
+              name="hosting"
+              value="yes"
+              required
+            />
+            <label class="form-check-label" for="hostingYes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="hostingNo"
+              name="hosting"
+              value="no"
+            />
+            <label class="form-check-label" for="hostingNo">No</label>
+          </div>
+          <div class="invalid-feedback">Please select an option.</div>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label for="about" class="col-sm-2 col-form-label custom-label"
+          >About:</label
+        >
+        <div class="col-sm-10 custom-input">
+          <textarea
+            class="form-control"
+            id="about"
+            name="about"
+            placeholder="Write about yourself"
+            rows="5"
+          ></textarea>
+          <div class="validation-message"></div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <div class="col-sm-10 offset-sm-2">
+          <button type="submit" class="btn btn-warning">
+            <i class="bi bi-upload"></i> Send
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Add event listener to validate inputs on form submission
+    const form = document.querySelector(".was-validated");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (form.checkValidity()) {
+        // If the form is valid, submit it
+        form.submit();
+      } else {
+        // If the form is invalid, show error messages
+        const invalidInputs = form.querySelectorAll(".is-invalid-input");
+        invalidInputs.forEach((input) => {
+          const validationMessage = input.querySelector(
+            ".validation-message"
+          );
+          validationMessage.innerText = "This field is required.";
+        });
+      }
+    });
+  </script>
+</body>
+</html>
